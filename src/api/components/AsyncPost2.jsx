@@ -10,9 +10,8 @@ const ServerPost2 = async () => {
             resolve({
                 title: '我是标题2'
             })
-        }, 1500);
+        }, 2000);
     }))
-    throw new Error('123')
     return <>
         {<Post data={result} error={error} />}
     </>
