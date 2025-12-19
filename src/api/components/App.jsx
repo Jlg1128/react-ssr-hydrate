@@ -14,10 +14,10 @@ export default function App() {
       <body>
         <Header />
         <main>
-          <ThemeProvider>
+          {/* <ThemeProvider> */}
             <PostContainer />
             <Form data={'This is Static data from parent RSC'} />
-          </ThemeProvider>
+          {/* </ThemeProvider> */}
         </main>
       </body>
     </html>

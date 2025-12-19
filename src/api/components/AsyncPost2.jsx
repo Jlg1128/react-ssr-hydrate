@@ -1,24 +1,21 @@
 import React, { Suspense } from "react"
 import fetchData from "../../fetch-data";
 import Post from "../../components/Post";
-import {AsyncPost2} from './AsyncPost2';
 
-const ServerPost = async () => {
+const ServerPost2 = async () => {
     let result, error;
     // result = await fetchData();
     result  = await (new Promise((resolve) => {
         setTimeout(() => {
             resolve({
-                title: '我是标题'
+                title: '我是标题2'
             })
         }, 1500);
     }))
+    throw new Error('123')
     return <>
         {<Post data={result} error={error} />}
-        <Suspense fallback={'loading3...'}>
-            <AsyncPost2 />
-        </Suspense>
     </>
 }
 
-export const AsyncPost = React.memo(ServerPost);
+export const AsyncPost2 = React.memo(ServerPost2);

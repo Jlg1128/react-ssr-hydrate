@@ -1,12 +1,12 @@
 
-"use client"
 import React, { useContext, useState } from "react";
 import { ThemeContext } from "./ThemeProvider";
 
 
 export const Form = ({ data }) => {
-    const context = useContext(ThemeContext);
-    console.log('Theme context value', context);
+    const context = 'red';
+    // const context = useContext(ThemeContext);
+    // console.log('Theme context value', context);
     const [search, setSearch] = useState('');
     const [result, setResult] = useState('')
 

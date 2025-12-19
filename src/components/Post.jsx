@@ -1,5 +1,5 @@
-"use client"
 import React, { useEffect, useState } from "react";
+import AsyncPost2 from '../api/components/AsyncPost2';
 
 export const Post = ({ data, error }) => {
     const result = data;

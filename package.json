@@ -12,8 +12,8 @@
   },
   "scripts": {
     "babel:build": "babel src --out-dir dist --extensions .ts,.js,.tsx,.jsx,.cjs,.mjs --presets=@babel/preset-env,@babel/preset-react",
-    "server:start": "node ./dist/server.js",
-    "start": "npm run build:dev && npm run babel:build && npm run server:start",
+    "server:start": "node --inspect=0.0.0.0:9229 ./dist/server.js",
+    "start": "nodemon --watch 'src/**/*' -e js,jsx --exec 'npm run build:dev && npm run babel:build && npm run server:start'",
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
